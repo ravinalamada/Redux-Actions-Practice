@@ -1,5 +1,6 @@
 import {connect} from 'react-redux';
 import Users from '../components/Users';
+import {addUsers} from '../actions/index'
 
 function mapStateToProps(state){
     return {
@@ -7,4 +8,9 @@ function mapStateToProps(state){
     }
 }
 
-export default connect(mapStateToProps, null)(Users)
+const mapToDispatch = {
+  addUsers
+}
+
+
+export default connect(mapStateToProps, mapToDispatch)(Users)

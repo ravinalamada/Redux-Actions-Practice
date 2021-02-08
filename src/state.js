@@ -73,6 +73,6 @@ export default{
     "occupation": "wife",
     "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/bigmancho/128.jpg"
   }
-] 
+]
 
 }

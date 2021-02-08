@@ -1,7 +1,7 @@
 import React from 'react';
-import TextField from '@material-ui/core/TextField'
+import TextField from '@material-ui/core/TextField';
 
-function SpecialTextBox({ set }) {
+function SpecialTextBox({ set, text }) {
   return (
       <div>
         <div>Enter Special Text:</div>
@@ -14,4 +14,5 @@ function SpecialTextBox({ set }) {
   );
 }
 
-export default (SpecialTextBox);
+
+export default SpecialTextBox;

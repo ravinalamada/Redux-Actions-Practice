@@ -2,19 +2,21 @@ import React from 'react';
 
 // containers
 import Users from "./containers/Users";
+import CounterButton from './containers/counterButton';
+import Counter from './containers/counter';
+import SpecialText from "./containers/SpecialText";
+import SpecialTextBox from "./containers/SpecialTextBox";
+import CurrentCity from "./containers/currentCity";
+import CityDropDown from "./containers/cityDropDown";
+
 
 // components
-import CounterButton from "./components/CounterButton";
-import SpecialTextBox from "./containers/SpecialTextBox";
-import Counter from "./components/Counter";
-import SpecialText from "./containers/SpecialText";
+
 import UserButtons from "./components/UserButtons";
 import Thermostat from "./components/Thermostat";
 import ChangeTemperature from "./components/ChangeTemperature";
 import ImagePreview from "./components/ImagePreview";
 import ImageUrlTextBox from "./components/ImageUrlTextBox";
-import CurrentCity from "./components/CurrentCity";
-import CityDropDown from "./components/CityDropDown";
 import SearchTextBox from "./components/SearchTextBox";
 import SortUsers from "./components/SortUsers";
 import ScaleImage from "./components/ScaleImage";
@@ -58,8 +60,8 @@ function App() {
           <br />
           <ImagePreview />
           <br />
-          
-          
+
+
         </div>
         <div className="container">
           <h2>Users</h2>
