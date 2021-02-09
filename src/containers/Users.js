@@ -2,10 +2,10 @@ import {connect} from 'react-redux';
 import Users from '../components/Users';
 
 function mapStateToProps(state){
-  // console.log(state.users);
+
     return {
       users: state.users,
-      sortOn: state.Users,
+      sortOn: state.currentUserSort,
       firstNameFilter: state.searchText
     }
 }

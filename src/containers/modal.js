@@ -1,5 +1,10 @@
 import {connect} from 'react-redux';
 import Modal from '../components/Modal';
+import {setDisplayModal} from '../actions/index'
+
+const mapToDispatch = {
+  toggleModal: setDisplayModal
+}
 
 function mapStateToProps(state) {
   return {
@@ -7,4 +12,4 @@ function mapStateToProps(state) {
   }
 }
 
-export default connect(mapStateToProps)(Modal)
+export default connect(mapStateToProps, mapToDispatch)(Modal)

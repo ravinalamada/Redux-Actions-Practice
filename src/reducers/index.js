@@ -14,12 +14,11 @@ function currentCount(state=0, action){
 
 // incomplete reducer function that should check an action prop type to return an array of users
 function users(users =[], action){
-  console.log(users);
   switch(action.type) {
     case 'ADD_USERS':
       return [...users, action.payload]
     case  'REMOVE_USERS':
-      return users.filter(user => user !== action.payload)
+      return users.slice(0, users.length - 1)
     default:
       return users;
 
@@ -49,7 +48,7 @@ function currentTemp(state=0, action){
 function displayModal(state=false, action){
   switch(action.type) {
      case 'SET_DISPLAY_MODAL':
-       return !action.payload
+       return !state
       default:
         return state;
   }
@@ -65,11 +64,13 @@ function imageUrl(state="", action){
 }
 
 function currentUserSort(state="first_name", action){
+  console.log('this text',state);
   switch(action.type) {
     case 'SET_CURRENT_USER_SORT':
       return action.payload
+    default:
+      return state;
   }
-  return state;
 }
 
 function imageScale(state=1, action){

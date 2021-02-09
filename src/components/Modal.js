@@ -14,6 +14,8 @@ const customStyles = {
 };
 
 function ModalTemplate({ displayModal, toggleModal }) {
+  console.log(displayModal);
+  console.log(toggleModal);
   return (
     <Modal
       isOpen={displayModal}

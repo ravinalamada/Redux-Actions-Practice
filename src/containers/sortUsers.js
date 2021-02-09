@@ -7,4 +7,4 @@ const mapToDispatch = {
 }
 
 
-export default connect(null ,mapToDispatch)(SortUsers)
+export default connect((state) => ({sortUser : state.currentUserSort}) ,mapToDispatch)(SortUsers)

@@ -8,4 +8,4 @@ const mapToDispatch = {
 }
 
 
-export default connect(null ,mapToDispatch)(CityDropDown)
+export default connect((state) => ({currentCity: state.currentCity}) ,mapToDispatch)(CityDropDown)

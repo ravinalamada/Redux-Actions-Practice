@@ -1,11 +1,11 @@
 export default{
   currentCount:0,
-  specialText:"",
-  currentCity:"",
+  specialText:"prisca",
+  currentCity:"london",
   searchText:"",
   currentTemp: 0,
   displayModal: false,
-  imageUrl: "",
+  imageUrl: "https://www.thestatesman.com/wp-content/uploads/2020/04/1c5b1aa3386eeb2c21d633f04e2ddfbe.jpg",
   currentUserSort:"first_name",
   imageScale:1,
   users: [
