@@ -15,12 +15,19 @@ export function decrease(){
     type: 'DECREASE'
   }
 }
-export function setSearchText(thing){
+export function setSearchUserOnFirstName(thing){
   return {
-    type: 'SET_SEARCH_TEXT',
+    type: 'SET_SEARCH_USER_ON_FIRST_NAME',
     payload: thing
   }
 }
+export function setSortNames(thing){
+  return {
+    type: 'SET_SORT_NAMES',
+    payload: thing
+  }
+}
+
 export function setCurrentCity(thing){
   return {
     type: 'SET_CURRENT_CITY',
@@ -28,7 +35,7 @@ export function setCurrentCity(thing){
   }
 }
 
-export function setCurrentTemp(thing){
+export function setCurrentTemp(thing = 0){
   return {
     type: 'SET_CURRENT_TEMP',
     payload: thing
@@ -37,25 +44,25 @@ export function setCurrentTemp(thing){
 
 export function setCurrentUserSort(thing){
   return {
-    type: 'SEt_CURRENT_USER_SORT',
+    type: 'SET_CURRENT_USER_SORT',
     payload: thing
   }
 }
-export function setDisplayModal(thing){
+export function setDisplayModal(){
   return {
-    type: 'SEt_DISPLAY_MODAL',
-    payload: thing
+    type: 'SET_DISPLAY_MODAL',
   }
 }
+
 export function setImageUrl(thing){
   return {
-    type: 'SEt_IMAGE_URL',
+    type: 'SET_IMAGE_URL',
     payload: thing
   }
 }
 export function setImageScale(thing){
   return {
-    type: 'SEt_IMAGE_SCALE',
+    type: 'SET_IMAGE_SCALE',
     payload: thing
   }
 }
@@ -63,6 +70,13 @@ export function setImageScale(thing){
 export function addUsers(thing){
   return {
     type: 'ADD_USERS',
+    payload: thing
+  }
+}
+
+export function removeUsers(thing){
+  return {
+    type: 'REMOVE_USERS',
     payload: thing
   }
 }

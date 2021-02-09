@@ -8,20 +8,19 @@ import SpecialText from "./containers/SpecialText";
 import SpecialTextBox from "./containers/SpecialTextBox";
 import CurrentCity from "./containers/currentCity";
 import CityDropDown from "./containers/cityDropDown";
-
-
+import SearchTextBox from "./containers/searchTextBox";
+import SortUsers from "./containers/sortUsers";
+import UserButtons from "./containers/userButtons";
+import ShowModal from "./containers/showModals";
+import Modal from "./containers/modal";
+import Thermostat from "./containers/thermostat";
+import ChangeTemperature from "./containers/changeTemperature";
+import ImagePreview from "./containers/imagePreview";
+import ScaleImage from "./containers/scaleImage";
+import ImageUrlTextBox from "./containers/imageUrlTextBox";
 // components
 
-import UserButtons from "./components/UserButtons";
-import Thermostat from "./components/Thermostat";
-import ChangeTemperature from "./components/ChangeTemperature";
-import ImagePreview from "./components/ImagePreview";
-import ImageUrlTextBox from "./components/ImageUrlTextBox";
-import SearchTextBox from "./components/SearchTextBox";
-import SortUsers from "./components/SortUsers";
-import ScaleImage from "./components/ScaleImage";
-import Modal from "./components/Modal";
-import ShowModal from "./components/ShowModal";
+
 
 function App() {
   return (

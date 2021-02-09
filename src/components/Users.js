@@ -2,6 +2,7 @@ import React from 'react';
 import uuid from 'uuid';
 
 function Users({ users, sortOn, firstNameFilter }) {
+  console.log(users, firstNameFilter);
   let usersDivs = null;
   let sorted = [];
 
@@ -22,8 +23,8 @@ function Users({ users, sortOn, firstNameFilter }) {
     }
 
     usersDivs = userNames.filter(function(u){
-      return !firstNameFilter || 
-      (firstNameFilter && 
+      return !firstNameFilter ||
+      (firstNameFilter &&
       u.first_name.indexOf(firstNameFilter) > -1);
     });
 

@@ -13,12 +13,18 @@ function currentCount(state=0, action){
 }
 
 // incomplete reducer function that should check an action prop type to return an array of users
-function users(state =[], action){
-  if(action.type === 'ADD_USERS') {
-    return [...state, action.payload]
+function users(users =[], action){
+  console.log(users);
+  switch(action.type) {
+    case 'ADD_USERS':
+      return [...users, action.payload]
+    case  'REMOVE_USERS':
+      return users.filter(user => user !== action.payload)
+    default:
+      return users;
 
   }
-  return state;
+
 }
 
 function currentCity(state="", action){
@@ -31,28 +37,58 @@ function currentCity(state="", action){
   }
 }
 
-function currentTemp(state=0){
+function currentTemp(state=0, action){
+  switch(action.type) {
+    case 'SET_CURRENT_TEMP':
+      return action.payload;
+      default:
+        return state;
+  }
+}
+
+function displayModal(state=false, action){
+  switch(action.type) {
+     case 'SET_DISPLAY_MODAL':
+       return !action.payload
+      default:
+        return state;
+  }
+}
+
+function imageUrl(state="", action){
+  switch(action.type) {
+    case 'SET_IMAGE_URL':
+      return action.payload
+    default:
+      return state;
+  }
+}
+
+function currentUserSort(state="first_name", action){
+  switch(action.type) {
+    case 'SET_CURRENT_USER_SORT':
+      return action.payload
+  }
   return state;
 }
 
-function displayModal(state=false){
-  return state;
+function imageScale(state=1, action){
+  switch(action.type) {
+    case 'SET_IMAGE_SCALE':
+      return action.payload
+    default:
+      return state
+  }
 }
 
-function imageUrl(state=""){
-  return state
-}
+function searchText(users="", action){
+  switch(action.type) {
+    case 'SET_SEARCH_USER_ON_FIRST_NAME':
+      return action.payload.toLowerCase()
+    default:
+      return users;
+  }
 
-function currentUserSort(state="first_name"){
-  return state;
-}
-
-function imageScale(state=1){
-  return state
-}
-
-function searchText(state=""){
-  return state;
 }
 
 // complete reducer function that should check action prop type ""SET_SPECIAL_TEXT" to determine state value
